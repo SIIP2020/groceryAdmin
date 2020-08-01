@@ -15,29 +15,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
-                                
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLocations" aria-expanded="false" aria-controls="collapseLocations">
-                                <div class="sb-nav-link-icon"><i class="fas fa-map-marker-alt"></i></div>
-                                Locations
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseLocations" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link sub_nav_link" href="locations.php">All Locations</a>
-                                    <a class="nav-link sub_nav_link" href="add_location.php">Add Location</a>
-                                </nav>
-                            </div>      
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAreas" aria-expanded="false" aria-controls="collapseAreas">
-                                <div class="sb-nav-link-icon"><i class="fas fa-map-marked-alt"></i></div>
-                                Areas
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseAreas" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link sub_nav_link" href="areas.php">All Areas</a>
-                                    <a class="nav-link sub_nav_link" href="add_area.php">Add Area</a>
-                                </nav>
-                            </div>
+                            
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCategories" aria-expanded="false" aria-controls="collapseCategories">
                                 <div class="sb-nav-link-icon"><i class="fas fa-list"></i></div>
                                 Categories
@@ -62,17 +40,6 @@
 
                                 </nav>
                             </div>
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProducts" aria-expanded="false" aria-controls="collapseProducts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-box"></i></div>
-                                Products
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseProducts" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link sub_nav_link" href="products.php">All Products</a>
-                                    <a class="nav-link sub_nav_link" href="add_product.php">Add Product</a>
-                                </nav>
-                            </div>
                             <a class="nav-link" href="orders.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-cart-arrow-down"></i></div>
                                 Orders
@@ -88,10 +55,6 @@
                                     <a class="nav-link sub_nav_link" href="Vendors.php">Vendors</a>
                                 </nav>
                             </div>
-                            <a class="nav-link" href="offers.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-gift"></i></div>
-                                Offers
-                            </a>
                             
                             
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSettings" aria-expanded="false" aria-controls="collapseSettings">
@@ -106,10 +69,7 @@
                                     <a class="nav-link sub_nav_link" href="email_setting.php">Email Settings</a>
                                 </nav>
                             </div>
-                            <a class="nav-link" href="reports.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-bar"></i></div>
-                                Reports
-                            </a>
+                          
                         </div>
                     </div>
                 </nav>

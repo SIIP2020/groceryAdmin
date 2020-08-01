@@ -34,15 +34,71 @@
                         <h2 class="mt-30 page-title">Shops</h2>
                         <ol class="breadcrumb mb-30">
                             <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="shops.php">Shops</a></li>
-                            <li class="breadcrumb-item active">Shop Products</li>
+                            <li class="breadcrumb-item"><a href="vendors.php">Vendors</a></li>
+                            <li class="breadcrumb-item active">Vendor Details</li>
                         </ol>
                         <div class="row">
-							
+                        	<?php
+                	
+                	           if (isset($_GET['vid'])) {
+	                             $vid=base64_decode($_GET['vid']);
+	                              
+				                                    require '/xampp/htdocs/groceryAdmin/includes/dbh.inc.php';
+
+				                                    $sql = "SELECT shop.shop_name ,shop.street_address, shop.city, shop.state, shop.pincode, shop.gst_no , shop.license_no FROM vendor JOIN shop on shop.vid=vendor.vid where vendor.vid=$vid";
+				                                    $stmt = mysqli_stmt_init($conn);
+				                                    if (!mysqli_stmt_prepare($stmt,$sql)) {
+				    	                                 header("Location: ../vendor_shop_view.php?error=sqlerror");
+				                                         exit(); 	
+				    	                               }
+				    	                            else 
+				    	                           {
+				    	                           	 mysqli_stmt_execute($stmt);
+				    	                           	 $result = mysqli_stmt_get_result($stmt);
+				                                    if(mysqli_num_rows($result)>0)
+				                                    { 
+				                                       while ($row = mysqli_fetch_assoc($result)) {
+				                                       ?>
+							<div class="col-lg-4 col-md-5">
+								<div class="card card-static-2 mb-30">
+									<div class="card-title-2">
+										<h4>Shop Details</h4>
+									</div>
+									<div class="card-body-table">
+										<div class="news-content-right pd-20">
+											<div class="form-group">
+												<label class="form-label">Shop Name*</label>
+									          <input type="number" class="form-control" placeholder="<?php echo $row['shop_name'];?>"readonly>
+
+											</div>
+											<div class="form-group">
+												<label class="form-label">Gst No*</label>
+												<input type="number" class="form-control" placeholder="<?php echo $row['gst_no'];?>" readonly>
+											</div>
+											<div class="form-group">
+												<label class="form-label">License No.*</label>
+									          <input type="number" class="form-control" placeholder="<?php echo $row['license_no'];?>"readonly>
+
+											</div>
+											<div class="form-group">
+												<label class="form-label">Address*</label>
+									          <input type="number" class="form-control" placeholder="<?php echo $row['street_address']. ",". $row['city']. "," .$row['state'];?>" readonly>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+										 <?php 
+											      }
+				                                   }
+				                                }}
+				                                
+				                                    ?>
 							<div class="col-lg-8 col-md-7">
 								<div class="all-cate-tags">
 									<div class="row justify-content-between">
-										
 										<div class="col-lg-5 col-md-7">
 											<div class="bulk-section text-left mb-30">
 												<div class="search-by-name-input mr-0">
@@ -51,7 +107,6 @@
 												<button class="status-btn hover-btn" type="submit">Search Product</button>
 											</div>
 										</div>
-										
 										<div class="col-lg-12 col-md-12">
 											<div class="card card-static-2 mb-30">
 												<div class="card-title-2">
@@ -60,26 +115,25 @@
 												<div class="card-body-table">
 													<div class="table-responsive">
 														<table class="table ucp-table table-hover">
+															
 															<thead>
 																<tr>
 																	
-																	<th style="width:60px">ID</th>
 																	<th>Name</th>
 																	<th>Image</th>
 																	<th>Quantity</th>
 																	<th>Price</th>
 																	<th>Category</th>
-																	<th>Action</th>
 																</tr>
 															</thead>
 															<?php
                 	
-                	if (isset($_GET['shop_id'])) {
-	                             $sid=base64_decode($_GET['shop_id']);
+                	                                     if (isset($_GET['vid'])) {
+	                                                     $vid=base64_decode($_GET['vid']);
 	                              
 				                                    require '/xampp/htdocs/groceryAdmin/includes/dbh.inc.php';
 
-				                                    $sql = "SELECT product.Pid ,product.Pname, product.MRP, product.quantity, product.image,category.cat_name FROM product JOIN category on product.cat_id=category.cat_id where product.shop_id=$sid";
+				                                    $sql = "SELECT product.Pid ,product.Pname, product.MRP, product.quantity, product.image,category.cat_name FROM product JOIN category on product.cat_id=category.cat_id where product.vid=$vid";
 				                                    $stmt = mysqli_stmt_init($conn);
 				                                    if (!mysqli_stmt_prepare($stmt,$sql)) {
 				    	                                 header("Location: ../shops.php?error=sqlerror");
@@ -96,7 +150,6 @@
 				                                       	$image_src = "uploads/".$image; ?>
 															<tbody>
 																<tr>
-																	<td><?php echo $row['Pid'];?></td>
 																	
 																	<td><?php echo $row['Pname'];?></td>
 																	<td><div class="cate-img">
@@ -106,17 +159,14 @@
 																	<td><?php echo $row['quantity'];?></td>
 																	
 																	<td><?php echo $row['MRP'];?></td>								
-																	<td><?php echo $row['cat_name'];?></td>									
-																	<td class="action-btns">
-																		<a href="#" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-																	</td>
+																	<td><?php echo $row['cat_name'];?></td>						
 																</tr>
 															
 														
 																
 																
 															</tbody>
-															 <?php 
+														 <?php 
 											      }
 				                                   }
 				                                }}
@@ -127,7 +177,6 @@
 												</div>
 											</div>
 										</div>
-										   
 									</div>
 								</div>
 							</div>

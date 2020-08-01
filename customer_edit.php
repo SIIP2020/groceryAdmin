@@ -37,7 +37,7 @@
                         <h2 class="mt-30 page-title">Customers</h2>
                         <ol class="breadcrumb mb-30">
                             <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="customers.pnp">Customers</a></li>
+                            <li class="breadcrumb-item"><a href="customers.php">Customers</a></li>
                             <li class="breadcrumb-item active">Customer Edit</li>
                         </ol>
                         <div class="row">

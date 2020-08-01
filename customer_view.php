@@ -43,43 +43,48 @@
 								<div class="card card-static-2 mb-30">
 									<div class="card-body-table">
 										<div class="shopowner-content-left text-center pd-20">
-											
+											<?php
+                	
+                	                 if (isset($_GET['vid'])) {
+	                                   $vid=base64_decode($_GET['vid']);
+	                              
+				                                    require '/xampp/htdocs/groceryAdmin/includes/dbh.inc.php';
+
+				                                    $sql = "SELECT * FROM vendor where vid=$vid";
+				                                    $stmt = mysqli_stmt_init($conn);
+				                                    if (!mysqli_stmt_prepare($stmt,$sql)) {
+				    	                                 header("Location: ../shops.php?error=sqlerror");
+				                                         exit(); 	
+				    	                               }
+				    	                            else 
+				    	                           {
+				    	                           	 mysqli_stmt_execute($stmt);
+				    	                           	 $result = mysqli_stmt_get_result($stmt);
+				                                    if(mysqli_num_rows($result)>0)
+				                                    { 
+				                                       while ($row = mysqli_fetch_assoc($result)) {
+				                                       ?> 
 											<div class="shopowner-dt-left mt-4">
 												<h4>Joginder Singh</h4>
 												<span>Customer</span>
 											</div>
-											<ul class="product-dt-purchases">
-												<li>
-													<div class="product-status">
-														Purchased <span class="badge-item-2 badge-status">15</span>
-													</div>
-												</li>
-												<li>
-													<div class="product-status">
-														Rewards <span class="badge-item-2 badge-status">5</span>
-													</div>
-												</li>
-											</ul>
+											
 											<div class="shopowner-dts">
 												<div class="shopowner-dt-list">
 													<span class="left-dt">Name</span>
-													<span class="right-dt">Joginder Singh</span>
-												</div>
-												<div class="shopowner-dt-list">
-													<span class="left-dt">Username</span>
-													<span class="right-dt">joginder</span>
+													<span class="right-dt"><?php echo $row["status"]; ?></span>
 												</div>
 												<div class="shopowner-dt-list">
 													<span class="left-dt">Email</span>
-													<span class="right-dt">sjas1202@gmail.com</span>
+													<span class="right-dt"><?php echo $row["status"]; ?></span>
 												</div>
 												<div class="shopowner-dt-list">
 													<span class="left-dt">Phone</span>
-													<span class="right-dt">+918437176189</span>
+													<span class="right-dt"><?php echo $row["status"]; ?></span>
 												</div>
 												<div class="shopowner-dt-list">
 													<span class="left-dt">Address</span>
-													<span class="right-dt">Ludhiana, Punjab</span>
+													<span class="right-dt"><?php echo $row["status"]; ?></span>
 												</div>
 											</div>
 										</div>

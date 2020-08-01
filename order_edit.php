@@ -34,8 +34,8 @@
                     <div class="container-fluid">
                         <h2 class="mt-30 page-title">Orders</h2>
                         <ol class="breadcrumb mb-30">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="orders.html">Orders</a></li>
+                            <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="orders.php">Orders</a></li>
                             <li class="breadcrumb-item active">Order Edit</li>
                         </ol>
                         <div class="row">

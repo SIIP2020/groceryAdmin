@@ -21,7 +21,6 @@
                         echo'
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                             <ul class="dropdown-item admin-dropdown-item">
-                            <a class="dropdown-item admin-dropdown-item" href="edit_profile.php">Edit Profile</a>
                             <a class="dropdown-item admin-dropdown-item" href="logout.php">Logout</a>
                             </ul>
                         </div>';

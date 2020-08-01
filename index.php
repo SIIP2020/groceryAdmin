@@ -144,63 +144,9 @@
 															<a href="order_edit.php" class="edit-btn"><i class="fas fa-edit"></i></a>
 														</td>
 													</tr>
-													<tr>
-														<td>ORDER12346</td>
-														<td>
-															<a href="#" target="_blank">Product Title Here</a>
-														</td>
-														<td>
-															<span class="delivery-time">13/06/2020</span>
-															<span class="delivery-time">2:00PM - 4.00PM</span>
-														</td>
-														<td>#0000, St No. 8, Shahid Karnail Singh Nagar, MBD Mall, Frozpur road, Ludhiana, 141001</td>
-														 <td>
-															<span class="badge-item badge-status">Pending</span>
-														</td>
-														<td>$105</td>
-														<td class="action-btns">
-															<a href="order_view.php" class="views-btn"><i class="fas fa-eye"></i></a>
-															<a href="order_edit.php" class="edit-btn"><i class="fas fa-edit"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td>ORDER12347</td>
-														<td>
-															<a href="#" target="_blank">Product Title Here</a>
-														</td>
-														<td>
-															<span class="delivery-time">13/6/2020</span>
-															<span class="delivery-time">5:00PM - 7.00PM</span>
-														</td>
-														<td>#0000, St No. 8, Shahid Karnail Singh Nagar, MBD Mall, Frozpur road, Ludhiana, 141001</td>
-														<td>
-															<span class="badge-item badge-status">Pending</span>
-														</td>
-														<td>$60</td>
-														<td class="action-btns">
-															<a href="order_view.php" class="views-btn"><i class="fas fa-eye"></i></a>
-															<a href="order_edit.php" class="edit-btn"><i class="fas fa-edit"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td>ORDER12348</td>
-														<td>
-															<a href="#" target="_blank">Product Title Here</a>
-														</td>
-														<td>
-															<span class="delivery-time">12/06/2020</span>
-															<span class="delivery-time">01:00PM - 3.00PM</span>
-														</td>
-														<td>#0000, St No. 8, Shahid Karnail Singh Nagar, MBD Mall, Frozpur road, Ludhiana, 141001</td>
-														<td>
-															<span class="badge-item badge-status">Pending</span>
-														</td>
-														<td>₹120</td>
-														<td class="action-btns">
-															<a href="order_view.php" class="views-btn"><i class="fas fa-eye"></i></a>
-															<a href="order_edit.php" class="edit-btn"><i class="fas fa-edit"></i></a>
-														</td>
-													</tr>
+												
+												
+												
 												</tbody>
 											</table>
 										</div>

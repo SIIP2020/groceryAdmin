@@ -111,7 +111,7 @@ session_start();
 														<td><span class="badge-item badge-status">Active</span></td>
 														<td class="action-btns">
 															<a href="shop_view.php?shop_id=<?php echo base64_encode($row['shop_id']); ?>" class="view-shop-btn"><i class="fas fa-eye"></i></a>
-															<a href="shop_products.php" class="list-btn"><i class="fas fa-list-alt"></i></a>
+															<a href="shop_products.php?shop_id=<?php echo base64_encode($row['shop_id']); ?>" class="list-btn"><i class="fas fa-list-alt"></i></a>
 															<a href="edit_shop.php?shop_id=<?php echo base64_encode($row['shop_id']); ?>" class="edit-btn"><i class="fas fa-edit"></i></a>
 														</td>
 													</tr>

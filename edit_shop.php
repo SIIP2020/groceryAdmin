@@ -53,7 +53,7 @@ ob_start();
 				                                    { 
 				                                       while ($row = mysqli_fetch_assoc($result)) {
 				                                       $image = $row['shop_image'];
-				                                       $image_src = "uploads/".$image;?>
+				                                       $image_src = "uploads/".$image; ?>
                     <div class="container-fluid">
                         <h2 class="mt-30 page-title">Shops</h2>
                         <ol class="breadcrumb mb-30">

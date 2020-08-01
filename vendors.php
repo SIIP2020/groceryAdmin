@@ -82,8 +82,8 @@
 														<td><?php echo $row['address'];?></td>
 
 														<td class="action-btns">
-															<a href="customer_view.php" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="customer_edit.php" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
+															<a href="customer_edit.php?vid=<?php echo base64_encode($row['vid']); ?>" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
+															<a href="vendor_shop_view.php?vid=<?php echo base64_encode($row['vid']); ?>" class="list-btn"><i class="fas fa-list-alt"></i></a>
 															<a href="includes/delete_ven.php?vid=<?php echo base64_encode($row['vid']); ?>&action=delete "class="delete-btn" title="Edit"><i class="fas fa-trash-alt"></i></a>
 														</td>
 													</tr>

@@ -38,35 +38,13 @@
                             <li class="breadcrumb-item active">Orders</li>
                         </ol>
                         <div class="row justify-content-between">
-							<div class="col-lg-3 col-md-4">
-								<div class="bulk-section mb-30">
-									<div class="input-group">
-										<select id="action" name="action" class="form-control">
-											<option selected>Bulk Actions</option>
-											<option value="1">Pending</option>
-											<option value="2">Cancel</option>
-											<option value="3">Process</option>
-											<option value="4">Complete</option>
-											<option value="5">Delete</option>
-										</select>
-										<div class="input-group-append">
-											<button class="status-btn hover-btn" type="submit">Apply</button>
-										</div>
-									</div>
-								</div>
-							</div>
+							
 							<div class="col-lg-5 col-md-6">
 								<div class="bulk-section mb-30">
 									<div class="search-by-name-input">
 										<input type="text" class="form-control" placeholder="Search">
 									</div>
 									<div class="input-group">
-										<select id="categeory" name="categeory" class="form-control">
-											<option value="1">Pending</option>
-											<option value="2">Cancel</option>
-											<option value="3">Process</option>
-											<option value="4">Complete</option>
-										</select>
 										<div class="input-group-append">
 											<button class="status-btn hover-btn" type="submit">Search Order</button>
 										</div>
@@ -83,7 +61,6 @@
 											<table class="table ucp-table table-hover">
 												<thead>
 													<tr>
-														<th style="width:60px"><input type="checkbox" class="check-all"></th>
 														<th style="width:130px">Order ID</th>
 														<th>Item</th>
 														<th style="width:200px">Date</th>
@@ -95,7 +72,6 @@
 												</thead>
 												<tbody>
 													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="4"></td>
 														<td>ORDER12345</td>
 														<td>
 															<a href="#" target="_blank">Product Title Here</a>
@@ -114,66 +90,7 @@
 															<a href="order_edit.php" class="edit-btn"><i class="fas fa-edit"></i></a>
 														</td>
 													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="3"></td>
-														<td>ORDER12346</td>
-														<td>
-															<a href="#" target="_blank">Product Title Here</a>
-														</td>
-														<td>
-															<span class="delivery-time">13/06/2020</span>
-															<span class="delivery-time">2:00PM - 4.00PM</span>
-														</td>
-														<td>#0000, St No. 8, Shahid Karnail Singh Nagar, MBD Mall, Frozpur road, Ludhiana, 141001</td>
-														 <td>
-															<span class="badge-item badge-status">Pending</span>
-														</td>
-														<td>$105</td>
-														<td class="action-btns">
-															<a href="order_view.php" class="views-btn"><i class="fas fa-eye"></i></a>
-															<a href="order_edit.php" class="edit-btn"><i class="fas fa-edit"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="2"></td>
-														<td>ORDER12347</td>
-														<td>
-															<a href="#" target="_blank">Product Title Here</a>
-														</td>
-														<td>
-															<span class="delivery-time">13/6/2020</span>
-															<span class="delivery-time">5:00PM - 7.00PM</span>
-														</td>
-														<td>#0000, St No. 8, Shahid Karnail Singh Nagar, MBD Mall, Frozpur road, Ludhiana, 141001</td>
-														<td>
-															<span class="badge-item badge-status">Pending</span>
-														</td>
-														<td>$60</td>
-														<td class="action-btns">
-															<a href="order_view.php" class="views-btn"><i class="fas fa-eye"></i></a>
-															<a href="order_edit.php" class="edit-btn"><i class="fas fa-edit"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="1"></td>
-														<td>ORDER12348</td>
-														<td>
-															<a href="#" target="_blank">Product Title Here</a>
-														</td>
-														<td>
-															<span class="delivery-time">12/06/2020</span>
-															<span class="delivery-time">01:00PM - 3.00PM</span>
-														</td>
-														<td>#0000, St No. 8, Shahid Karnail Singh Nagar, MBD Mall, Frozpur road, Ludhiana, 141001</td>
-														<td>
-															<span class="badge-item badge-status">Pending</span>
-														</td>
-														<td>$120</td>
-														<td class="action-btns">
-															<a href="order_view.php" class="views-btn"><i class="fas fa-eye"></i></a>
-															<a href="order_edit.php" class="edit-btn"><i class="fas fa-edit"></i></a>
-														</td>
-													</tr>
+												
 												</tbody>
 											</table>
 										</div>
